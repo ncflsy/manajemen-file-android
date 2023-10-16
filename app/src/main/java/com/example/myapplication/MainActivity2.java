@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
 import android.widget.TextView;
-
+import java.io.File;
 import java.io.FileInputStream;
 
 public class MainActivity2 extends AppCompatActivity {
