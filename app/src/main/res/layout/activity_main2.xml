@@ -18,28 +18,35 @@
         android:textStyle="bold|italic"
         />
     <Button
+        android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button4"
-        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/button5"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="22dp"
-        android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
         android:onClick="savePublic"
         android:text="save as public"
         />
-
-    <EditText
+    
+    <Button
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:gravity="center_vertical|center"
-        android:inputType="textMultiLine"
-        />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/getText"
+        android:layout_marginTop="178dp"
+        android:onClick="getPrivate"
+        android:text="show private data"
+        tools:ignore="UnknownId"/>
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="59dp"
+        android:onClick="back"
+        android:text="back"/>
 
 </RelativeLayout>

@@ -10,7 +10,7 @@ import java.io.File;
 import java.io.FileInputStream;
 
 public class MainActivity2 extends AppCompatActivity {
-
+    TextView showText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
