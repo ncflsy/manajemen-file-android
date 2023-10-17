@@ -22,9 +22,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        editText = (EditText) findViewById(R.id.editText2);
     }
     public void next(View view){
         Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        startActivity(intent);
     }
 
     public void savePublic(View view){
