@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -26,13 +27,19 @@ public class MainActivity2 extends AppCompatActivity {
     public void getPublic(View view){
         File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
         File myFile = new File(folder, "myData1.txt");
-        String text = getdata(myFile);
-        if (text != null){
-            showText.setText(text);
-        }else{
-            showText.setText("No Data");
+
+        if (myFile.exists()) {
+            String text = getdata(myFile);
+            if (text != null){
+                showText.setText(text);
+            } else {
+                showText.setText("No Data");
+            }
+        } else {
+            Toast.makeText(this, "File not found: " + myFile.getAbsolutePath(), Toast.LENGTH_SHORT).show();
         }
     }
+
 
     public void getPrivate(View view){
         File folder = getExternalFilesDir("arvita");
