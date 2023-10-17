@@ -24,8 +24,8 @@
         android:layout_above="@+id/button5"
         android:layout_alignParentRight="true"
         android:layout_marginRight="32dp"
-        android:onClick="savePublic"
-        android:text="save as public"
+        android:onClick="getPublic"
+        android:text="show public data"
         />
     
     <Button

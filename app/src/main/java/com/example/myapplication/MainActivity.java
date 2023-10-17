@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         FileOutputStream fileOutputStream = null;
         try {
             System.out.println("Tes");
+            fileOutputStream = new FileOutputStream(myFile);
+            fileOutputStream.write(data.getBytes());
             Toast.makeText(this, "done" + myFile.getAbsolutePath(), Toast.LENGTH_SHORT).show();
         }catch (Exception e){
             e.printStackTrace();

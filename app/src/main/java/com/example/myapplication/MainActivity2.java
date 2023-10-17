@@ -36,7 +36,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     public void getPrivate(View view){
         File folder = getExternalFilesDir("arvita");
-        File myFile = new File(folder, "myDara2.txt");
+        File myFile = new File(folder, "myData2.txt");
         String text = getdata(myFile);
         if (text != null){
             showText.setText(text);
