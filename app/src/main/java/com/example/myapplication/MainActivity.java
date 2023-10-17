@@ -17,18 +17,18 @@ import java.io.IOException;
 public class MainActivity extends AppCompatActivity {
 
     EditText editText;
-    private int STROGAGE_PERMISSION_CODE = 23;
+//    private int STROGAGE_PERMISSION_CODE = 23;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
     public void next(View view){
-        Intent intent = new Intent(MainActivity.this. MainActivity2.class);
+        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
     }
 
     public void savePublic(View view){
-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
+//        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
         String info = editText.getText().toString();
         File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
         File myFile = new File(folder, "myData1.txt");
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         FileOutputStream fileOutputStream = null;
         try {
             System.out.println("Tes");
-            Toast.makeText(this, "done" + myFile.getAbsolutePath(), Toast.LENGTH_SHORT.show());
+            Toast.makeText(this, "done" + myFile.getAbsolutePath(), Toast.LENGTH_SHORT).show();
         }catch (Exception e){
             e.printStackTrace();
         } finally {

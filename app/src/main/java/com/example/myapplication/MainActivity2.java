@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 
 public class MainActivity2 extends AppCompatActivity {
     TextView showText;
@@ -18,10 +19,14 @@ public class MainActivity2 extends AppCompatActivity {
         showText = (TextView) findViewById(R.id.getText);
     }
 
+    public void back(View view){
+        Intent intent = new Intent(MainActivity2.this, MainActivity.class);
+        startActivity(intent);
+    }
     public void getPublic(View view){
         File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
         File myFile = new File(folder, "myData1.txt");
-        String text = getdata(myfile);
+        String text = getdata(myFile);
         if (text != null){
             showText.setText(text);
         }else{
@@ -32,7 +37,7 @@ public class MainActivity2 extends AppCompatActivity {
     public void getPrivate(View view){
         File folder = getExternalFilesDir("arvita");
         File myFile = new File(folder, "myDara2.txt");
-        String text = getdata(myfile);
+        String text = getdata(myFile);
         if (text != null){
             showText.setText(text);
         }else{
@@ -56,7 +61,7 @@ public class MainActivity2 extends AppCompatActivity {
             if (fileInputStream != null){
                 try {
                     fileInputStream.close();
-                }catch (IOExeption e){
+                }catch (IOException e){
                     e.printStackTrace();
                 }
             }
