@@ -17,7 +17,7 @@ import java.io.IOException;
 public class MainActivity extends AppCompatActivity {
 
     EditText editText;
-//    private int STROGAGE_PERMISSION_CODE = 23;
+    private int STORAGE_PERMISSION_CODE = 23;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void savePublic(View view){
-//        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
+        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
         String info = editText.getText().toString();
         File folder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
         File myFile = new File(folder, "myData1.txt");
